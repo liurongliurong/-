@@ -1,0 +1,214 @@
+@import '../style.scss';
+@import './common.scss';
+
+.data-auth {
+
+  header {
+    width: 100%;
+    font-size: 26px;
+    color: #666666;
+    line-height: 66px;
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  .prompt-box {
+    width: 100%;
+    margin: 40px auto;
+    @include flex(center, center, column);
+    background: rgba(249,161,30,0.10);
+    border: 1px solid #fa9700;
+    border-radius: 8px;
+
+    .title {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 17px;
+    }
+
+    .content {
+      font-size: 14px;
+      color: #666;
+      line-height: 30px;
+    }
+  }
+
+  .tips {
+    @include flex(center, center, column);
+
+    p {
+      width: 530px;
+      color: #666;
+      text-align: center;
+    }
+
+    p:first-child {
+      margin-bottom: 18px;
+    }
+
+    .phone {
+      font-size: 20px;
+      color: #fa9700;
+      line-height: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .content {
+    margin: 0 0 0 27px;
+    width: 100%;
+
+    .item-input {
+      section {
+        margin-top: 20px;
+        @include flex(flex-start, center);
+
+        span {
+          @include flex(flex-end, center);
+          width: 208px;
+          font-size: 16px;
+          color: #666666;
+          line-height: 24px;
+        }
+
+        input {
+          width: 300px;
+          height: 48px;
+          margin-left: 20px;
+          padding-left: 20px;
+          background: #FFFFFF;
+          border: 1px solid #666;
+          border-radius: 8px;
+
+          &:focus {
+            border: 1px solid #fa9700;
+          }
+        }
+
+        .verify-input {
+          width: 170px;
+          margin: 0 10px 0 20px;
+        }
+
+        .verify-button {
+          width: 120px;
+        }
+
+        .unit {
+          width: auto;
+          position: relative;
+          left: -45px;
+        }
+      }
+
+      .hint {
+        margin-bottom: -20px;
+        padding-left: 228px;
+      }
+    }
+
+    .choose-bank {
+      margin-bottom: 50px;
+
+      .title {
+        @include flex(center, center);
+        font-size: 24px;
+        color: #333333;
+        border: 0;
+      }
+
+      .banks {
+        @include flex(flex-start, center, row, wrap);
+
+        .bank {
+          @include flex(center, center);
+          width: 243px;
+          height: 100px;
+          margin: 0 20px 20px 0;
+          border: 2px solid #e5e5e5;
+          border-radius: 8px;
+          cursor: pointer;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .actives {
+          border: 2px solid #fa9700;
+        }
+      }
+    }
+
+    .verify-section {
+      @include flex(flex-start, center);
+
+      span {
+        @include flex(flex-end, center);
+        width: 208px;
+        font-size: 16px;
+        color: #666666;
+        line-height: 24px;
+      }
+
+      input {
+        width: 170px;
+        height: 48px;
+        margin: 0 10px 0 20px;
+        padding-left: 20px;
+        background: #FFFFFF;
+        border: 1px solid #333333;
+        border-radius: 8px;
+      }
+
+      button {
+        width: 120px;
+        height: 48px;
+      }
+    }
+
+    .button-group {
+      @include flex(center, center, column);
+
+      .read {
+        width: 100%;
+        @include flex(center, center);
+        margin: 20px 0;
+        position: relative;
+        right: 65px;
+
+        .circle {
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          margin-right: 8px;
+          border-radius: 50%;
+          border: solid 1px #546bff;
+          cursor: pointer;
+        }
+
+        .icon-right {
+          width: 16px;
+          height: 16px;
+          border: 0;
+          background: url('../../assets/login/icon-choose.png') no-repeat;
+          background-size: 16px 16px;
+        }
+
+        .blue {
+          color: #24f;
+          cursor: pointer;
+        }
+      }
+
+      .submit {
+        width: 300px;
+        position: relative;
+        right: 26px;
+      }
+    }
+  }
+}

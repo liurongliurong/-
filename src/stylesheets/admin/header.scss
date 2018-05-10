@@ -1,0 +1,91 @@
+@import '../style.scss';
+
+ .admin-header {
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+
+    .title {
+      font-size: 24px;
+      color: #333333;
+    }
+
+    .right {
+      @include flex(flex-start, center, row);
+      .sign-out {
+        cursor: pointer;
+      }
+
+      section {
+        @include flex(flex-start, center, row);
+
+        .user-name {
+          margin-right: 40px;
+        }
+
+        i {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+          display: inline-block;
+        }
+
+        .icon-user {
+          background: url('../../assets/admin/common/icon-user.png') no-repeat;
+          background-size: 100% 100%;
+        }
+
+        .icon-exit {
+          background: url('../../assets/admin/common/icon-exit.png') no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+
+      .sign-out {
+        cursor: pointer;
+      }
+
+      .user-info {
+        padding: 20px 0;
+        position: relative;
+
+        .user-info-nav {
+          position: absolute;
+          top: 52px;
+          left: -8px;
+          width: 100px;
+          border: solid 1px #d1d1d1;
+          box-shadow: 1px 1px 5px #d1d1d1;
+          text-align: center;
+          line-height: 42px;
+          background: #fff;
+          z-index: 100;
+          cursor: pointer;
+          display: none;
+          a {
+            width: 100%;
+            color: #666;
+            line-height: 44px;
+            display: inline-block;
+          }
+
+          &:hover {
+            display: block;
+            background: #f9a11e;
+
+            a {
+              color: #fff;
+            }
+          }
+        }
+
+        &:hover .user-info-nav{
+          display: block;
+        }
+      }
+    }
+  }

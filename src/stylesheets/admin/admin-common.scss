@@ -1,0 +1,196 @@
+@import '../style.scss';
+
+.search {
+  width: 100%;
+  height: 82px;
+  @include flex(space-between,center,row);
+  padding: 0 30px;
+  background: #f7f7f7;
+
+  .search-input {
+    @include flex(flex-end,center,row);
+    position: relative;
+    left: 57px;
+
+    input {
+      width: 320px;
+      height: 42px;
+      padding-left: 20px;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    i {
+      width: 56px;
+      height: 42px;
+      position: relative;
+      right: 62px;
+      cursor: pointer;
+      border-left: solid 1px #e5e5e5;
+      background: url('../../assets/common/icon-search.png') no-repeat center;
+      background-size: 16px 16px;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  background: #e9eaed;
+  padding: 30px;
+
+  .table {
+
+    .thead {
+      height: 50px;
+      padding: 0 20px;
+      @include flex(flex-start, center);
+      font-size: 16px;
+      color: #666;
+      font-weight: bold;
+      border-radius: 8px 8px 0 0;
+      background: #f7f7f7;
+
+      span {
+        @include flex(center, center);
+      }
+
+      .back {
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .sub {
+        margin-left: 12px;
+        padding-left: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        border-left: 1px solid #979797;
+      }
+    }
+
+    .tbody {
+      width: 100%;
+      height: 500px;
+      @include flex(flex-start, center, column);
+      font-size: 14px;
+      color: #666;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E5E5E5;
+
+      .td {
+        padding: 0 20px;
+        @include flex(flex-start, center);
+        width: 100%;
+        height: 50px;
+        border-bottom: solid 1px #efefef;
+
+        span {
+          text-align: center;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &:hover {
+          background: #f7f7f7;
+
+          .detail {
+            color: #fff;
+            background: #f9a11e;
+            border-radius: 66px;
+          }
+        }
+
+        .detail {
+          width: 48px;
+          line-height: 26px;
+          color: #f9a11e;
+          background: #fff;
+          border: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .tfoot {
+      @include flex(space-between,center);
+      height: 80px;
+      padding: 0 45px;
+      background: #fff;
+      border-radius: 0 0 8px 8px;
+
+      .total-page {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+}
+
+.item-input {
+  section {
+    margin-top: 20px;
+    @include flex(flex-start, center);
+
+    span {
+      @include flex(flex-end, center);
+      width: 208px;
+      font-size: 16px;
+      color: #666;
+      line-height: 24px;
+    }
+
+    input {
+      width: 300px;
+      height: 42px;
+      margin-left: 20px;
+      padding-left: 20px;
+      background: #fff;
+      border: 1px solid #e1e1e1;
+      border-radius: 8px;
+
+      &:focus {
+        border: 1px solid #fa9700;
+      }
+    }
+
+    select, textarea {
+      margin-left: 20px;
+    }
+
+    .verify-input {
+      width: 170px;
+      margin: 0 10px 0 20px;
+    }
+
+    .verify-button {
+      width: 120px;
+    }
+  }
+
+  .hint {
+    margin-bottom: -20px;
+    padding-left: 228px;
+  }
+}
+
+.detail-button {
+  width: 68px;
+  line-height: 28px;
+  padding: 0 18px;
+  color: #fa9700;
+  border: 1px solid #fa9700;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+  background: url('../../assets/common/down-arrow.png') no-repeat;
+  background-position: 270px center;
+  background-size: 13px;
+}

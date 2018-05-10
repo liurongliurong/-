@@ -1,0 +1,35 @@
+@import '../style.scss';
+
+.partner {
+  @include total-width;
+  margin: 0 auto;
+
+  header {
+    @include flex(center, center);
+    margin: 60px auto 35px;
+    font-size: 32px;
+    color: #333333;
+  }
+
+  padding-bottom: 35px;
+
+  .item-lists {
+    @include flex(space-around, center);
+    width: 100%;
+
+    .item {
+      @include flex(center, center);
+      width: calc(100% / 5);
+      height: 71px;
+      margin: 0;
+      border-right: 1px solid #eff1f4;
+      border-bottom: 1px solid #eff1f4;
+      background: #fff;
+
+      img {
+        width: 106px;
+        height: 40px;
+      }
+    }
+  }
+}

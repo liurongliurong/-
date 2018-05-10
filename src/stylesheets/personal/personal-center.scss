@@ -1,0 +1,183 @@
+@import '../style.scss';
+@import './common.scss';
+
+.personal-center {
+  header {
+    width: 100%;
+    font-size: 26px;
+    color: #666666;
+    line-height: 66px;
+    border-bottom: solid 1px #e5e5e5;
+    @include flex(space-between, center, row);
+
+    button {
+      height: 42px;
+    }
+  }
+
+  main {
+    @include flex(center, flex-start, column);
+
+    section {
+      margin-top: 40px;
+      width: 100%;
+
+      header {
+        line-height: 24px;
+        padding-left: 11px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        border-bottom: none;
+        border-left: solid 6px #f9a11e;
+
+        .sub {
+          margin-left: 24px;
+          font-weight: normal;
+          font-size: 14px;
+          color: #2277da;
+        }
+      }
+
+      article {
+        padding-left: 17px;
+
+        .auth-introduce {
+          width: 100%;
+          margin: 20px 0 40px;
+          font-size: 14px;
+          color: #999;
+          line-height: 30px;
+          background: #f7f7f7;
+          border: 1px solid #f0f0f0;
+        }
+
+        button {
+          width: 184px;
+          height: 42px;
+          font-size: 16px;
+          background: #f9a11e;
+          border-radius: 8px;
+
+          a {
+            color: #fff;
+          }
+        }
+
+        .apply {
+          margin: 40px 0;
+          background: #fff;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+          color: #666;
+        }
+      }
+
+      .auth-info {
+        .auth-title {
+          @include flex(flex-start, center, row);
+          margin: 30px 0 20px;
+
+          .company-name {
+            font-size: 18px;
+            color: #333;
+          }
+        }
+
+        .auth-list {
+          margin-bottom: 18px;
+
+          .auth-name {
+            padding-left: 17px;
+            display: inline-block;
+            width: 159px;
+            font-size: 14px;
+            color: #666;
+          }
+        }
+
+        .table {
+          margin-top: 30px;
+          .thead {
+            // padding: 0 20px;
+            margin-bottom: 15px;
+            @include flex(flex-start, center);
+
+            span {
+              text-align: center;
+              font-size: 16px;
+              color: #666;
+              font-weight: bold;
+            }
+          }
+
+          .tbody {
+            width: 100%;
+            @include flex(flex-start, center, column);
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+
+            .td {
+              // padding: 0 20px;
+              @include flex(flex-start, center);
+              width: 100%;
+              height: 50px;
+              border-bottom: solid 1px #efefef;
+
+              &:last-child {
+                border-bottom: 0;
+              }
+
+              &:hover {
+                background: #f7f7f7;
+
+                .detail {
+                  color: #fff;
+                  background: #f9a11e;
+                  border-radius: 66px;
+                }
+              }
+
+              .detail {
+                width: 48px;
+                line-height: 26px;
+                color: #f9a11e;
+                background: #fff;
+                border: 0;
+                text-align: center;
+              }
+
+              span {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .order-lists {
+        width: 100%;
+        padding: 0;
+        margin-top: 70px;
+        @include flex(space-around, center, row);
+
+        div {
+          @include flex(center, center, column);
+          cursor: pointer;
+
+          img {
+            width: 60px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .table {
+        .td {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

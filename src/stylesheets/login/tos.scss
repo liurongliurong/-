@@ -1,0 +1,26 @@
+@import '../style.scss';
+
+.tos {
+  background: #fff;
+
+  main {
+    @include total-width;
+    header {
+      @include flex(center, center);
+      font-size: 24px;
+      color: #333333;
+      padding: 18px 0;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-indent: 2em;
+      font-size: 16px;
+    }
+
+    .title {
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '../style.scss';
+@import './common.scss';
+
+.order {
+  height: 700px;
+
+  header {
+    width: 100%;
+    font-size: 26px;
+    color: #666666;
+    line-height: 66px;
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  .filter {
+    @include flex(space-between, center);
+    margin: 40px 0 35px;
+
+    .button-groups {
+      width: 500px;
+      @include flex(flex-start, center);
+
+      button {
+        height: 36px;
+        margin-right: 10px;
+        padding: 0 16px;
+        color: #666;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+
+        &:hover {
+          color: #f9a11e;
+          border: 1px solid #f9a11e;
+        }
+      }
+
+      .active-botton {
+        color: #fff;
+        background: #f9a11e;
+        border: 1px solid #f9a11e;
+
+        &:hover {
+          color: #fff;
+          border: 1px solid #f9a11e;
+        }
+      }
+    }
+
+
+    input {
+      width: 230px;
+      height: 36px;
+      padding-left: 20px;
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 49px;
+    }
+
+    .search-input {
+      @include flex(flex-end,center,row);
+      position: relative;
+      left: 57px;
+
+      input {
+        width: 270px;
+        height: 36px;
+        padding-left: 20px;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      i {
+        width: 56px;
+        height: 36px;
+        position: relative;
+        right: 62px;
+        cursor: pointer;
+        border-left: solid 1px #e5e5e5;
+        background: url('../../assets/common/icon-search.png') no-repeat center;
+        background-size: 16px 16px;
+      }
+    }
+  }
+
+
+}

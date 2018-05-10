@@ -1,0 +1,50 @@
+@import '../style.scss';
+@import './admin-common.scss';
+
+.user-detail {
+   .table {
+    padding: 0 30px 30px;
+    background: #fff;
+
+    .thead {
+      margin: 0 -30px;
+
+      .back {
+        a {
+          font-size: 14px;
+          color: #2277da;
+        }
+      }
+    }
+
+    .item-input {
+      input[type="radio"] {
+        width: 16px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 50%;
+
+        &:focus {
+          background: #f9a11e;
+          border: solid 1px #f9a11e;
+        }
+      }
+
+      .show-bank-name, .show-user-name {
+        @include flex(flex-start, center);
+        padding-left: 20px;
+        margin-left: 20px;
+      }
+    }
+
+    .button-group {
+      width: 528px;
+      @include flex(flex-end, center);
+
+      button {
+        height: 42px;
+        margin-top: 60px;
+      }
+    }
+  }
+}

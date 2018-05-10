@@ -1,0 +1,71 @@
+@import 'style.scss';
+
+.home {
+  .banner {
+    height: 500px;
+    background: url('../assets/home/banner.png') no-repeat;
+  }
+
+  .card {
+    header {
+      @include flex(center, center);
+      margin: 60px auto 35px;
+      font-size: 32px;
+      color: #333333;
+    }
+
+    .item-lists {
+      @include flex(center, center);
+      border: solid 1px #e5e5e5;
+      border-color: #e5e5e5 transparent #e5e5e5;
+
+      .item {
+        width: 744px;
+        height: 250px;
+        padding: 30px;
+        cursor: pointer;
+        
+        .item-name {
+          font-weight: bold;
+          font-size: 24px;
+          color: #333333;
+        }
+
+        .item-introduce {
+          margin: 20px 0 30px;
+        }
+
+        .item-show {
+          font-size: 16px;
+          font-weight: bold;
+          color: #f9a11e;
+          line-height: 16px;
+
+          .arrow {
+            margin-left: 10px;
+            transform: rotate(45deg);
+            border: 2px solid #f9a11e;
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            border-color: #f9a11e #f9a11e transparent transparent;
+          }
+        }
+
+        aside {
+          width: 335px;
+          @include flex(center, flex-start, column);
+        }
+      }
+
+      .item:nth-child(odd) {
+        @include flex(flex-end, center);
+        border-right: solid 1px #e5e5e5;
+      }
+
+      .item:nth-child(even) {
+        @include flex(flex-start, center);
+      }
+    }
+  }
+}

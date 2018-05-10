@@ -1,0 +1,86 @@
+@import '../style.scss';
+@import './admin-common.scss';
+
+.statistics {
+
+  .container {
+    padding: 30px 30px 0 30px;
+    min-width: 1100px;
+
+    .static-form {
+      @include flex(space-between, center, row);
+
+      .item {
+        @include flex(flex-start, center, row);
+        width: 390px;
+        min-width: 245px;
+        height: 130px;
+        margin-bottom: 25px;
+        margin-right: 20px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+
+        img {
+          width: 41px;
+          margin: 0 27px 0 50px;
+        }
+
+        aside {
+          @include flex(flex, center, column);
+          padding-left: 18px;
+          color: #333;
+          border-left: 1px solid #e6e6e6;
+
+          .count {
+            font-size: 32px;
+          }
+
+          .unit {
+            font-size: 14px;
+            color: #151515;
+            line-height: 42px;
+          }
+
+          .name {
+            font-size: 14px;
+            color: #666;
+            line-height: 24px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .echart-lists {
+      width: 100%;
+      @include flex(space-between, center, row, wrap);
+
+      .card {
+        width: 49%;
+        min-width: 490px;
+        margin: 0 0 25px 0;
+        @include flex(flex-start, flex-start, column);
+
+        header {
+          width: 100%;
+          line-height: 50px;
+          text-indent: 30px;
+          font-weight: bold;
+          font-size: 18px;
+          color: #333;
+          background: #f7f7f7;
+          border: 1px solid #e5e5e5;
+        }
+
+        article {
+          width: 100%;
+          background: #fff;
+        }
+      }
+    }
+  }
+}

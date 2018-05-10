@@ -1,0 +1,34 @@
+@import '../style.scss';
+
+.footer {
+  width: 100%;
+  min-height: 60px;
+  font-size: 14px;
+  color: #999;
+  background: transparent;
+  border-top: solid 1px #999;
+
+  .content {
+    @include total-width;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include flex(center, center);
+
+    .phone {
+      @include flex(flex-start, center);
+
+      .icon-call {
+        width: 13px;
+        height: 14px;
+        margin-right: 7px;
+        display: inline-block;
+        background: url('../../assets/common/icon-call.png') no-repeat;
+        background-size: 13px 14px;
+      }
+
+      .phone-num {
+        font-weight: bold;
+      }
+    }
+  }
+}

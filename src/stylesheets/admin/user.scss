@@ -1,0 +1,70 @@
+@import '../style.scss';
+@import './admin-common.scss';
+
+.admin-user {
+  @include flex(center,flex-start,column);
+  min-width: 1070px;
+
+  .search {
+    // select {
+    //   width: 122px;
+    //   padding: 0 0 0 20px;
+    // }
+
+    .button-group {
+      button {
+        height: 42px;
+        margin-right: 10px;
+        padding: 0 20px;
+        color: #666;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+
+        &:hover {
+          color: #f9a11e;
+          border: 1px solid #f9a11e;
+        }
+      }
+
+      .active-botton {
+        color: #fff;
+        background: #f9a11e;
+        border: 1px solid #f9a11e;
+
+        &:hover {
+          color: #fff;
+          border: 1px solid #f9a11e;
+        }
+      }
+    }
+
+    .add-user:hover {
+      border: none;
+      color: #fff;
+      background: #3dbd7d;
+    }
+  }
+
+  .container {
+
+    .tbody {
+      .button-group {
+        @include flex(center,center);
+
+        .detail-button {
+          width: auto;
+          text-align: center;
+
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .red {
+      border: 1px solid #f44242;
+      color: #f44242;
+    }
+  }
+}

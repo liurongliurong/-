@@ -1,0 +1,212 @@
+@import '../style.scss';
+
+.order-details {
+  height: 700px;
+
+  header {
+    width: 100%;
+    @include flex(space-between, center);
+    border-bottom: solid 1px #e5e5e5;
+
+    span {
+      font-size: 26px;
+      color: #666666;
+      line-height: 66px;
+    }
+
+    button {
+      height: 30px;
+      font-size: 14px;
+      color: #666666;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    // margin: 40px auto;
+
+    // .introduce {
+    //   font-size: 16px;
+    //   color: #666666;
+    //   line-height: 30px;
+    // }
+
+    .order-status {
+      width: 100%;
+      line-height: 32px;
+      margin: 28px 0 14px;
+      padding-left: 10px;
+      background: #f7f7f7;
+      border: 1px solid #f0f0f0;
+
+      .status {
+        margin-left: 8px;
+        font-weight: bold;
+      }
+
+      .cancel {
+        height: 28px;
+        margin-left: 20px;
+        background: #fff;
+        color: #666;
+        border: solid 1px #e5e5e5;
+        cursor: pointer;
+      }
+
+      .show-pdf {
+        a {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .orderInfo {
+      margin-top: 30px;
+
+      .info {
+        margin-bottom: 30px;
+
+        .name {
+          font-size: 16px;
+          color: #666666;
+          line-height: 24px;
+        }
+
+        .fail-reason {
+          font-size: 16px;
+          color: #151515;
+          line-height: 30px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .order-info {
+      margin: 0 0 20px 0;
+
+      header {
+        height: 100%;
+        text-align: left;
+        font-weight: normal;
+        padding-left: 10px;
+        line-height: 30px;
+        font-size: 16px;
+        color: #333;
+        border-left: solid 4px rgba(118,119,135,0.38);
+        background: #f7f7f7;
+      }
+
+      section {
+        @include flex(flex-start, center);
+        height: 40px;
+        margin: 0;
+        border: solid 1px #e9e9e9;
+        border-top: 0;
+
+        div {
+          width: 50%;
+          height: 100%;
+          padding-left: 20px;
+          @include flex(flex-start, center);
+          border-right: solid 1px #e9e9e9;
+
+          .title {
+            min-width: 125px;
+            font-weight: bold;
+            opacity: 0.66;
+            display: inline-block;
+          }
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    .show-pdf {
+      cursor: pointer;
+
+      a {
+        color: #2c7bdb;
+      }
+
+      .download {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 3px;
+        background: url('../../assets/admin/order/download.png') no-repeat center;
+        background-size: 100%;
+      }
+    }
+
+    .confirm {
+      margin-bottom: 40px;
+      font-size: 16px;
+      color: #666666;
+    }
+
+    hr {
+      height:1px;
+      margin: 40px 0;
+      border:none;
+      border-top:1px dashed #e5e5e5;
+    }
+
+    .button-group {
+      @include flex(flex-end, center);
+
+      .submit {
+        width: 120px;
+        font-size: 18px;
+        margin-left: 20px;
+      }
+
+      .download-button {
+        font-size: 18px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        color: #666;
+      }
+    }
+
+    .agree-loan {
+      @include flex(flex-start, center, row);
+      margin-top: 30px;
+
+      img {
+        margin: 0 30px 0 0;
+        width: 132px;
+      }
+
+      .hint {
+        padding-left: 300px;
+      }
+
+      .unit {
+        @include flex(flex-start, center, row);
+        position: relative;
+        left: -30px;
+      }
+
+      .calendar {
+        margin-left: 10px;
+      }
+
+      button {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
